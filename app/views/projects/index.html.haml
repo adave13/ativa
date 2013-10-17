@@ -28,8 +28,9 @@
           %th Last updated
           %th
           %th
-      %tbody
+      %tbody.projects
         - @projects.each do |project|
+          = render "show", project:project
           %tr
             %td
               = link_to project.name, project_url(project.id)
